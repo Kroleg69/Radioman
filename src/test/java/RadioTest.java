@@ -148,8 +148,12 @@ public class RadioTest {
     @Test
     public void stationCount(){
         Radio radio = new Radio(9);
+        radio.setCurrentStation(8);
 
-        Assertions.assertEquals(9,radio.getMaxStation());
+        int expected = 8;
+        int actual = radio.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
     }
 
 }
